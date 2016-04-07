@@ -21,8 +21,8 @@ Route::get('notre-equipe', 'HomeController@notre_equipe');
 Route::get('nos-partenaires', 'HomeController@nos_partenaires');
 
 
-// ADMIN -----------------------------------------------------------------
-Route::get('admin',  ['middleware' => 'auth', 'uses' => 'AdminController@dashboard']);
+// ADMIN -------------------------------------------------------------------------------------------
+Route::get('admin',  ['middleware' => 'auth', 'uses' => 'AdminController@index']);
 
 // Connection
 Route::get('admin/login', 'Auth\AuthController@getLogin');
@@ -31,3 +31,6 @@ Route::get('admin/logout', 'Auth\AuthController@getLogout');
 
 Route::get('admin/register', 'Auth\AuthController@getRegister');
 Route::post('admin/register', 'Auth\AuthController@postRegister');
+
+// Articles
+Route::get('admin/articles', 'AdminController@all_articles');

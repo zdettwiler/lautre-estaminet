@@ -34,7 +34,9 @@ h3
     margin: 0;
 }
 
-p, li
+p,
+li,
+td
 {
     color: white;
     font-family: 'Roboto';
