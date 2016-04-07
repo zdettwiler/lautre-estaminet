@@ -1,8 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('includes')
-    <link rel="stylesheet" media="screen" type="text/css" href="/lautre-estaminet/public_html/css/main.css">
-    <link rel="stylesheet" media="screen" type="text/css" href="/lautre-estaminet/public_html/css/notre_concept.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="/css/notre_concept.css">
 @stop
 
 @section('main-content')

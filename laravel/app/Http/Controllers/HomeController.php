@@ -13,11 +13,16 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $next_events = $this->_get_next_events();
+		$next_events = $this->_get_next_events();
         $articles = $this->_get_articles(false, false, 3);
         // _get_exhibitors
 
         return view('home', compact('next_events', 'articles'));
+    }
+
+	public function notre_concept()
+    {
+        return view('notre_concept');
     }
 
     public function make_slug()
@@ -164,8 +169,5 @@ class HomeController extends Controller
         return view('notre_equipe', compact('equipe'));
     }
 
-    public function notre_concept()
-    {
-        return view('notre_concept');
-    }
+
 }

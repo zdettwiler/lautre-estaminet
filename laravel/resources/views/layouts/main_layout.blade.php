@@ -12,6 +12,7 @@
 			actualités, extra, plus, passé, passé, post, nouvelle, nouvelles, nouveauté, sensationel, galerie, photos, images, diaporama,
 			téléphone, tél, e-mail, mail, place, jean, jaurès, situer, adresse, parking">
 
+		<link rel="stylesheet" media="screen" type="text/css" href="/css/main.css">
 		<script src="js/jquery-1.11.3.min.js"></script>
 		@yield('includes')
 	</head>

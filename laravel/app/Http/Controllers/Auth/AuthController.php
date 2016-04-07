@@ -10,6 +10,12 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+	protected $redirectPath = '/admin';
+	protected $loginPath = '/admin/login';
+	protected $logoutPath = '/admin';
+	protected $username = 'name';
+
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -43,7 +49,7 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
     }
