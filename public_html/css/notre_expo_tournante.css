@@ -1,0 +1,36 @@
+/*
+    NOTRE-EXPO-TOURNANTE CSS STYLESHEET FOR L'AUTRE ESTAMINET
+    Probably Temporary
+    Started on 02 December 2015
+
+    Design by Zach Dettwiler
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
+
+
+html, body
+{
+    background-color: #2afa98;
+}
+
+#bg
+{
+    width: 100%;
+    min-height: 95%;
+    margin: 0px;
+    background: url(../img/home/notre_expo_tournante_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #2afa98;
+}
+
+#exhibitor-notices
+{
+    width: 60%;
+    margin: 70px auto 10px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+}

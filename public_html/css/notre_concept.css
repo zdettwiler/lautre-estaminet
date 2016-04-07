@@ -1,0 +1,33 @@
+/*
+    NOTRE-CONCEPT CSS STYLESHEET FOR L'AUTRE ESTAMINET
+    Probably Temporary
+    Started on 23rd December 2015
+
+    Design by Zach Dettwiler
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
+
+
+html, body
+{
+    background-color: #f1df00;
+}
+
+#bg
+{
+    width: 100%;
+    min-height: 80%;
+    margin: 0px;
+    background: url(../img/home/notre_concept_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#concept-text
+{
+    width: 70%;
+    margin: auto;
+}

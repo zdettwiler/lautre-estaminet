@@ -1,0 +1,66 @@
+/*
+    NOTRE-EQUIPE CSS STYLESHEET FOR L'AUTRE ESTAMINET
+    Probably Temporary
+    Started on 02 December 2015
+
+    Design by Zach Dettwiler
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
+
+
+html, body
+{
+    background-color: #2ecb71;
+}
+
+#bg
+{
+    width: 100%;
+    min-height: 80%;
+    margin: 0px;
+    background: url(../img/home/notre_equipe_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#equipe-descr
+{
+    width: 60%;
+    margin: 70px auto 10px;
+    padding: 20px;
+}
+
+#equipe-permanent
+{
+    width: 60%;
+    margin: auto;
+}
+
+.equipe-member
+{
+    width: 150px;
+    margin-top: 10px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+}
+
+.equipe-member-name
+{
+
+}
+.equipe-member-img
+{
+    /*width: 150px;*/
+    height: 150px;
+    display: block;
+}
+.equipe-member-blurb
+{
+    width: 150px;
+    font-size: 12px;
+    line-height: 15px;
+}

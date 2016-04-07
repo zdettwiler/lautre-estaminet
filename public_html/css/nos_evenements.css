@@ -1,0 +1,63 @@
+/*
+    NOS-EVENEMENTS CSS STYLESHEET FOR L'AUTRE ESTAMINET
+    Probably Temporary
+    Started on 21 November 2015
+
+    Design by Zach Dettwiler
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
+
+
+html, body
+{
+    background-color: #F6881D; /*#F0C30F*/
+}
+
+#bg
+{
+    width: 100%;
+    min-height: 95%;
+    margin: 0px;
+    background: url(../img/home/nos_evenements_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #f7891d;
+    /*position: absolute;
+    top: 0;
+    right: 0;*/
+}
+
+#events-notices
+{
+    width: 60%;
+    margin: 70px auto 10px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+}
+
+#articles-container
+{
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+.article-title,
+.article-title a
+{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.article-date
+{
+    width: 80px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 13px;
+    text-align: center;
+    padding: 0;
+}

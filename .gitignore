@@ -1,6 +1,3 @@
-vendor/
-node_modules/
-
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
@@ -12,3 +9,14 @@ storage/
 .env.php
 .env
 .env.example
+
+# Mine
+laravel/vendor
+laravel/node_modules
+laravel/Homestead.yaml
+laravel/Homestead.json
+laravel/.env
+
+public_html/img
+
+lautrees_db.sql

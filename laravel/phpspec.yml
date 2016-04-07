@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: lautreestaminet
+        psr4_prefix: lautreestaminet
+        src_path: app

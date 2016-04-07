@@ -1,0 +1,329 @@
+/*
+    MAIN CSS STYLESHEET FOR L'AUTRE ESTAMINET
+    Started on 20 November 2015
+
+    Design by Zach Dettwiler
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
+
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* FONTS */
+h1
+{
+    font-family: 'ChunkFive Ex';
+    /*font-weight: 700;*/
+    font-size: 100px;
+    color: #ffffff;
+    margin: 0 0 0 20px;
+    word-wrap: normal;
+}
+h3
+{
+    font-family: 'ChunkFive Ex';
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+
+p, li
+{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+a.big-button
+{
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+
+}
+
+/* NAV */
+#nav
+{
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 10;
+}
+#nav button
+{
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    background: url(../img/menu_button.png);
+    border: none;
+}
+#nav button:focus
+{
+	outline: none;
+}
+#nav-links
+{
+    display: block;
+    position: fixed;
+    bottom: 70px;
+    left: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    transform-origin: bottom left;
+    /*transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;*/
+
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -o-transform: scale(0);
+    -moz-transform: scale(0);
+}
+#nav-links.open, #nav:hover #nav-links
+{
+    transform-origin: bottom left;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+
+}
+#nav #nav-links a
+{
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    padding: 0px 20px;
+    background-color: #ffffff;
+    font-family: 'ChunkFive Ex';
+    font-size: 20px;
+    color: #000000;
+}
+/* HOME */
+.home-section
+{
+    width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+.home-section-blurb
+{
+    width: 40%;
+    margin-left: 10%;
+}
+.home-section-data
+{
+    width: 60%;
+    margin: 20px 0 0 10%;
+    border-left: 1px solid #ffffff;
+    padding-left: 20px;
+
+}
+.home-section-data li,
+.home-section-data p
+{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    /*line-height: 25px;*/
+}
+
+#header-section
+{
+    background: url("../img/home/header_home_bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #3b2612;
+}
+#logo-home
+{
+	/*background: url("../img/logo_white.png") no-repeat;
+    background-size: 100% 100%;*/
+	width: 300px;
+	z-index: 100;
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 40%;
+}
+#nos-produits
+{
+    background: url(../img/home/nos_produits_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #e45772;
+}
+#notre-concept
+{
+    background: url(../img/home/notre_concept_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #f1df00;
+}
+#nos-evenements
+{
+    background: url(../img/home/nos_evenements_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #f7891d;
+}
+#notre-expo-tournante
+{
+    background: url(../img/home/notre_expo_tournante_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #2afa98;
+}
+#notre-equipe
+{
+    background: url(../img/home/notre_equipe_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #2ecb71;
+
+}
+#nos-partenaires
+{
+    background: url(../img/home/nos_partenaires_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #ffd0de;
+}
+#nous-trouver
+{
+    background-color: #ff7599;
+    z-index: 2;
+}
+#google-map
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#nous-contacter
+{
+    background: url(../img/home/nous_contacter_home_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #9993db;
+}
+
+
+@media (max-width: 1050px)
+{
+    a.big-button
+    {
+        bottom: 30px;
+    }
+
+    .home-section-data
+    {
+        margin: 20px 0 70px 10%;
+    }
+    .home-section-blurb
+    {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 780px)
+{
+    h1
+    {
+        font-size: 80px;
+    }
+
+    .home-section-data,
+	.home-section-blurb
+    {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 530px)
+{
+    h1
+    {
+        font-size: 50px;
+    }
+
+	.home-section
+	{
+		padding: 10px;
+	}
+    .home-section-data
+    {
+        width: 90%;
+    }
+    .home-section-blurb
+    {
+        width: 90%;
+    }
+
+	a.big-button
+	{
+		bottom: 10px;
+		right: 10px;
+	}
+}
