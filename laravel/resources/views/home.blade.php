@@ -34,7 +34,7 @@
 
     <div id="nos-produits" class="home-section">
         <h1>NOS PRO&shy;DUITS</h1>
-        <a href="" class="big-button">découvrir nos produits</a>
+        <a href="nos-produits" class="big-button">découvrir nos produits</a>
     </div>
 
     <div id="notre-concept" class="home-section">
@@ -43,7 +43,7 @@
             <p>Les bénévoles et amis de l'association « le Lien » ont à coeur d'offrir à la population lensoise des perspectives d'épanouissement à travers l'ouverture de l'Autre Estaminet.
     Nous proposons un lieu convivial d'expression, d'écoute, de partage, d'échanges divers et variés intégrant plusieurs dimensions.</p>
         </div>
-        <a href="" class="big-button">lire davantage</a>
+        <a href="notre-concept" class="big-button">lire davantage</a>
     </div>
 
     <div id="nos-evenements" class="home-section">
@@ -63,7 +63,7 @@
             <h3>Récemment à l'Autre Estaminet:</h3>
             <ul>
             @foreach($articles as $article)
-                <li><a href="nos-evenements/{{ str_replace(' ', '', date('d', strtotime($article->date)).$article->month) }}/{{ $article->slug }}">{{ $article->title }} ({{ date('d', strtotime($article->date)) }} {{ $article->month }})</a></li>
+                <li><a href="nos-evenements/{{ str_replace(' ', '', $article->get_date_string()) }}/{{ $article->slug }}">{{ $article->title }} ({{ $article->get_date_string() }})</a></li>
             @endforeach
             </ul>
         </div>
@@ -88,12 +88,12 @@
             <p>Elle est belle, joyeuse, régulièrement renouvelée, internationale, intergénérationnelle... Elle est l'âme de l'Autre Estaminet, c'est en partie elle qui fait de ce lieu un Autre Estaminet: vous l'aurez compris, il s'agit de notre équipe. Depuis l'ouverture en septembre 2011, ce sont des centaines d'heures de bénévolat investies au service des clients. Toujours aussi motivée, cette équipe est vraiment incroyable, avec des personnalités tellement différentes qui arrivent à s'harmoniser. En voici quelques spécimens!</p>
         </div>
 
-        <a href="" class="big-button">rencontrer notre équipe</a>
+        <a href="notre-equipe" class="big-button">rencontrer notre équipe</a>
     </div>
 
     <div id="nos-partenaires" class="home-section">
         <h1>NOS PARTE&shy;NAIRES</h1>
-        <a href="" class="big-button">rencontrer nos partenaires</a>
+        <a href="nos-partenaires" class="big-button">rencontrer nos partenaires</a>
     </div>
 
     <div id="nous-trouver" class="home-section">

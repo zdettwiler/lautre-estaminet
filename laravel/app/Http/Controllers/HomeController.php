@@ -8,6 +8,7 @@ use lautreestaminet\Http\Requests;
 use lautreestaminet\Http\Controllers\Controller;
 
 use DB;
+use lautreestaminet\Article;
 
 class HomeController extends Controller
 {
@@ -18,6 +19,11 @@ class HomeController extends Controller
         // _get_exhibitors
 
         return view('home', compact('next_events', 'articles'));
+    }
+
+	public function nos_produits()
+    {
+        return view('nos_produits');
     }
 
 	public function notre_concept()
@@ -115,10 +121,9 @@ class HomeController extends Controller
         // If no date and no slug is provided, return all articles.
         if(!$date AND !$slug)
         {
-            $articles = DB::table('articles')
-    			->orderBy('date', 'desc')
-                ->take($nb)
-                ->get();
+			$articles = Article::orderBy('date', 'desc')
+				->take($nb)
+				->get();
         }
 
         // If at least date is provided, return corresponding article(s).
@@ -133,26 +138,17 @@ class HomeController extends Controller
 
             if(!$slug)
             {
-                $articles = DB::table('articles')
-            		->where('date', $date)
+				$articles = Article::where('date', $date)
 					->get();
             }
             else
             {
-                $articles = DB::table('articles')
-        			->where('date', $date)
+                $articles = Article::where('date', $date)
         			->where('slug', $slug)
                     ->get();
             }
         }
 
-        foreach($articles as $article)
-        {
-            $article_date = strtotime($article->date);
-            $article->month = $months_short[date('n', $article_date)] ." ". date('Y', $article_date);
-        }
-
-        // dd($articles);
         return $articles;
     }
 

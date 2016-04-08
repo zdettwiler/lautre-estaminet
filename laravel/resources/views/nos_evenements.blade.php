@@ -30,7 +30,7 @@
         @foreach($articles as $article)
         <h3 class="article-title"><a href="{{ $article->date }}/{{ $article->slug }}">{{ $article->title }}</a></h3>
         <div class="article-date">
-            {{ date('d', strtotime($article->date)) }} {{ $article->month }}
+            {{ $article->get_date_string() }}
         </div>
 
         {!! $article->post !!}
