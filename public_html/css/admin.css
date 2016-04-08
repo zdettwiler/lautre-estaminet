@@ -1,5 +1,58 @@
+html, body
+{
+    background-color: #F6881D; /*#F0C30F*/
+}
+
+#admin-nav
+{
+    display: block;
+    position: fixed;
+	height: 50px;
+	width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+	background-color: #3B2612;
+}
+#nav-mini-logo
+{
+	display: block;
+	margin: 10px auto;
+	height: 30px;
+
+}
+#logout-button
+{
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	color: white;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}
 #main-wrapper
 {
-	width: 60%;
-	margin: auto;
+	width: 80%;
+	margin: 50px auto;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+td
+{
+	border-bottom: 1px solid white;
+	height: 40px;
+}
+tr:hover
+{
+	background-color: #f8a24e;
+}
+.td_date
+{
+	width: 100px;
 }

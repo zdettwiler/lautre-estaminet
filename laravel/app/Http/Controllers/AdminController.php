@@ -18,7 +18,7 @@ class AdminController extends Controller
 
 	public function all_articles()
 	{
-		$articles = Article::all();
+		$articles = Article::orderBy('date', 'desc')->get();
 
 		// dd($articles);
 

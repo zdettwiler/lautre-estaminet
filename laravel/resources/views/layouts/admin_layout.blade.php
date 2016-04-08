@@ -18,8 +18,9 @@
 	</head>
 
 	<body>
-		<div id="nav">
-
+		<div id="admin-nav">
+			<img id="nav-mini-logo" src="/img/logo-white.png">
+			<a id="logout-button" href="/admin/logout">LOGOUT</a>
 		</div>
 
 		<div id="main-wrapper">
