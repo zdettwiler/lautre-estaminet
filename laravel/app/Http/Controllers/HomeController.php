@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use lautreestaminet\Http\Requests;
 use lautreestaminet\Http\Controllers\Controller;
 
+use Carbon\Carbon;
 use DB;
 use lautreestaminet\Article;
+use lautreestaminet\Artist;
 
 class HomeController extends Controller
 {
@@ -154,7 +156,9 @@ class HomeController extends Controller
 
     public function notre_expo_tournante()
     {
-        return view('notre_expo_tournante');
+		$artists = Artist::where('date_end', '>', Carbon::now())->get();
+
+		return view('notre_expo_tournante', compact('artists'));
     }
 
     public function notre_equipe()

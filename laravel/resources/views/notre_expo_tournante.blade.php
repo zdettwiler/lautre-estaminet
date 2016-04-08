@@ -13,6 +13,16 @@
     <div id="exhibitors-notices">
         <h3>Actuellement à l'Autre Estaminet:</h3>
 
+	@if(!$artists->isEmpty())
+        <ul>
+        @foreach($artists as $artist)
+                <li>{{ $artist->name }} jusqu'au {{ $artist->get_date_end_string() }}</li>
+        @endforeach
+        </ul>
+    @else
+        <p>Rien d'exposé pour le moment...</p>
+    @endif
+
 
     </div>
 </div>
