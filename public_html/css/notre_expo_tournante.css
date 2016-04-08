@@ -27,7 +27,15 @@ html, body
     background-color: #2afa98;
 }
 
-#exhibitor-notices
+#exhibitors-notices
+{
+    width: 60%;
+    margin: 70px auto 10px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+}
+
+#events-notices
 {
     width: 60%;
     margin: 70px auto 10px;
