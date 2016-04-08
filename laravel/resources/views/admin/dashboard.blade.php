@@ -6,9 +6,8 @@
 @stop
 
 @section('main-content')
+	<h3>ARTICLES</h3>
 
-	<h3>Articles</h3>
-	<h3>Événements</h3>
-	<h3>Équipe</h3>
+	
 
 @stop
