@@ -1,19 +1,19 @@
 @extends('layouts.main_layout')
 
 @section('includes')
-    <script src="/lautre-estaminet/public_html/js/masonry-3.3.2.min.js"></script>
-    <script src="/lautre-estaminet/public_html/js/imagesLoaded-3.2.0.min.js"></script>
+    <script src="/js/masonry-3.3.2.min.js"></script>
+    <script src="/js/imagesLoaded-3.2.0.min.js"></script>
     <script>
         $(function() {
             $('#equipe-permanent').masonry({
                 // options
-                itemSelector: '.equipe-member',
+                itemSelector: '.equipe-volunteer',
                 columnWidth: 190
             });
         });
     </script>
-    <link rel="stylesheet" media="screen" type="text/css" href="/lautre-estaminet/public_html/css/main.css">
-    <link rel="stylesheet" media="screen" type="text/css" href="/lautre-estaminet/public_html/css/notre_equipe.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="/css/notre_equipe.css">
 @stop
 
 @section('main-content')
@@ -27,11 +27,11 @@
 
     <div id="equipe-permanent">
 
-    @foreach($equipe as $member)
-        <div class="equipe-member">
-            <h3 class="equipe-member-name">{{ $member->name }}</h3>
-            <img class="equipe-member-img" src="img/benevoles/benevole_{{ $member->id }}.png" width="150px" height="150px">
-            <p class="equipe-member-blurb">{{ $member->descr }}</p>
+    @foreach($equipe as $volunteer)
+        <div class="equipe-volunteer">
+            <h3 class="equipe-volunteer-name">{{ $volunteer->name }}</h3>
+            <img class="equipe-volunteer-img" src="img/benevoles/benevole_{{ $volunteer->id }}.png" width="150px" height="150px">
+            <p class="equipe-volunteer-blurb">{{ $volunteer->description }}</p>
         </div>
     @endforeach
 
