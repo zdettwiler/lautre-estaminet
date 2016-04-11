@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use DB;
 use lautreestaminet\Article;
 use lautreestaminet\Artist;
+use lautreestaminet\Volunteer;
 
 class HomeController extends Controller
 {
@@ -163,11 +164,15 @@ class HomeController extends Controller
 
     public function notre_equipe()
     {
-        $equipe = DB::table('equipe')
-			->get();
+        $equipe = Volunteer::orderBy('date_leave', 'desc')->get();
 
         return view('notre_equipe', compact('equipe'));
     }
+
+	public function nous_contacter(Request $form)
+	{
+		
+	}
 
 
 }
