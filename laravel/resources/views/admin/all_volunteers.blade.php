@@ -13,11 +13,11 @@
 			<tr>
 				<td><img src="/img/benevoles/benevole_{{ $volunteer->id }}.png" width="150px"></td>
 				<td>
-					<a href="benevoles/{{ $volunteer->id }}"><h3>{{ $volunteer->name }} <img src="/img/"</h3>({{ $volunteer->id }})</a><br>
+					<a href="benevole/{{ $volunteer->id }}"><h3>{{ $volunteer->name }} <img src="/img/flags/{{ $volunteer->nationality }}.png" height="20px"></h3>({{ $volunteer->id }})</a><br>
 					{{ $volunteer->description }}
 				</td>
-				<td><a href="benevoles/{{ $volunteer->id }}"><img src="/img/edit.png"></a></td>
-				<td><a href="benevoles/{{ $volunteer->id }}"><img src="/img/delete.png"></a></td>
+				<td><a href="benevole/{{ $volunteer->id }}"><img src="/img/edit.png"></a></td>
+				<td><a href="benevole/{{ $volunteer->id }}"><img src="/img/delete.png"></a></td>
 			</tr>
 		@endforeach
 	</table>
