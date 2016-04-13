@@ -16,7 +16,7 @@
 	@if(!$artists->isEmpty())
         <ul>
         @foreach($artists as $artist)
-                <li>{{ $artist->name }} jusqu'au {{ $artist->get_date_end_string() }}</li>
+                <li>{{ $artist->name }} jusqu'au {{ $artist->get_date_string('end') }}</li>
         @endforeach
         </ul>
     @else

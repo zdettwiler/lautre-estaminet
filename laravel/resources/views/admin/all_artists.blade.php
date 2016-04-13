@@ -14,7 +14,7 @@
 				<td>
 					<a href="artiste/{{ $artist->id }}">
 						<h3>{{ $artist->name }}</h3>
-						({{ $artist->id }})
+						(#{{ $artist->id }}) Du {{ $artist->get_date_string('start') }} au {{ $artist->get_date_string('end') }}
 					</a><br>
 					{{-- {{ $artist->description }} --}}
 				</td>
