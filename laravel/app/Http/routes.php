@@ -41,3 +41,5 @@ Route::get('admin/articles', 'AdminController@all_articles');
 Route::get('admin/article/{id}', 'AdminController@edit_articles');
 Route::get('admin/benevoles', 'AdminController@all_volunteers');
 Route::get('admin/benevole/{id}', 'AdminController@edit_volunteer');
+Route::get('admin/artistes', 'AdminController@all_artists');
+Route::get('admin/artiste/{id}', 'AdminController@edit_artist');

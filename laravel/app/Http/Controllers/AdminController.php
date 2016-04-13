@@ -8,6 +8,7 @@ use lautreestaminet\Http\Requests;
 use lautreestaminet\Http\Controllers\Controller;
 
 use lautreestaminet\Article;
+use lautreestaminet\Artist;
 use lautreestaminet\Volunteer;
 
 class AdminController extends Controller
@@ -35,8 +36,6 @@ class AdminController extends Controller
 	{
 		$volunteers = Volunteer::orderBy('date_leave', 'desc')->get();
 
-		// dd($articles);
-
         return view('admin.all_volunteers', ['volunteers' => $volunteers]);
 	}
 
@@ -45,5 +44,19 @@ class AdminController extends Controller
 		$volunteer = Volunteer::where('id', $id)->first();
 
 		return view('admin.edit_volunteer', ['volunteer' => $volunteer]);
+	}
+
+	public function all_artists()
+	{
+		$artists = Artist::orderBy('date_end', 'desc')->get();
+
+        return view('admin.all_artists', ['artists' => $artists]);
+	}
+
+	public function edit_artist($id)
+	{
+		$artist = Artist::where('id', $id)->first();
+
+		return view('admin.edit_artist', ['artist' => $artist]);
 	}
 }
