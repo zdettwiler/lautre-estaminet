@@ -73,6 +73,7 @@
 @section('main-content')
 	<div id="loading-bar"></div>
 	<h1>BÉNÉ&shy;VOLE #{{ $volunteer->id }}</h1>
+	<span id="edit-status" class="success">Fais tes modifs!</span>
 
 	<form class="edit-table-item-form" method="POST" action="/admin/api/edit/volunteer/{{ $volunteer->id }}" data-db-table="equipe">
 	    {!! csrf_field() !!}
