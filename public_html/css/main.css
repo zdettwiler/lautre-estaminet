@@ -16,6 +16,14 @@ html, body
     padding: 0;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+{
+    outline: none;
+}
+
 /* FONTS */
 h1
 {
@@ -36,7 +44,9 @@ h3
 
 p,
 li,
-td
+td,
+input,
+textarea
 {
     color: white;
     font-family: 'Roboto';
@@ -55,7 +65,7 @@ a:hover
     text-decoration: underline;
 }
 
-a.big-button
+a.big-button,
 {
     padding: 10px 20px;
     color: white;
@@ -67,7 +77,6 @@ a.big-button
     position: absolute;
     bottom: 20%;
     right: 10%;
-
 }
 
 /* NAV */
@@ -138,6 +147,18 @@ a.big-button
     font-size: 20px;
     color: #000000;
 }
+
+#loading-bar
+{
+	display: none;
+	width: 100%;
+	height: 5px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
 /* HOME */
 .home-section
 {
@@ -172,6 +193,100 @@ a.big-button
     font-size: 16px;
     /*line-height: 25px;*/
 }
+
+.nous-contacter-section-wide
+{
+	width: 100%;
+	text-align: center;
+	margin: auto;
+}
+.nous-contacter-section-wide p
+{
+	margin: 0px;
+}
+.nous-contacter-section-wide input,
+.nous-contacter-section-wide textarea
+{
+	color: black;
+	width: 400px;
+}
+.nous-contacter-section-wide button[type="submit"],
+{
+    padding: 10px 20px;
+    color: white;
+	background-color: none;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+.edit-table-item-form label
+{
+	color: black;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+	width: 150px;
+	display: inline-block;
+}
+.edit-table-item-form input,
+.edit-table-item-form textarea
+{
+	border: none;
+	color: black;
+	width: 400px;
+	padding-left: 5px;
+}
+
+.edit-table-item-form #nationality-input
+{
+	display: inline-block;
+	background-color: white;
+	width: 400px;
+
+}
+.edit-table-item-form #nationality-results-box
+{
+	display: block;
+	position: absolute;
+	background-color: #F8F8F8;
+	width: 400px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+
+}
+.edit-table-item-form .nationality-result-option
+{
+	height: 20px;
+	width: 400px;
+	padding: 5px 0 0 5px;
+}
+.edit-table-item-form .nationality-result-option:hover
+{
+	background-color: #F1F1F1;
+}
+.edit-table-item-form .nationality-result-option span
+{
+	margin: 0;
+	color: black;
+	font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#nationality-input input
+{
+	width: 350px;
+}
+#nationality-input img
+{
+	position: relative;
+    top: 4px;
+	right: -12px;
+}
+
 
 #header-section
 {
@@ -270,6 +385,28 @@ a.big-button
     -o-background-size: cover;
     background-size: cover;
     background-color: #9993db;
+}
+
+#footer
+{
+	height: 80%;
+	background-color: #555555;
+	position: relative;
+}
+#footer #links
+{
+	width: 33%;
+	float: left;
+}
+#footer #facebook
+{
+	width: 33%;
+	float: left;
+}
+#footer #links
+{
+	width: 33%;
+	float: left;
 }
 
 
