@@ -65,7 +65,18 @@ a:hover
     text-decoration: underline;
 }
 
-a.big-button,
+a.big-button
+{
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    
+}
+a.big-button-home
 {
     padding: 10px 20px;
     color: white;

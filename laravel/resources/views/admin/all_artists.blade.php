@@ -7,6 +7,7 @@
 
 @section('main-content')
 	<h1>ARTISTES</h1>
+	<a class="big-button" style="float:right" href="/admin/api/add/artist/">Ajouter un Artiste</a>
 
 	<table class="edit-table">
 		@foreach($artists as $artist)

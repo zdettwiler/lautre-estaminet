@@ -34,6 +34,7 @@ Route::get('admin/logout', 'Auth\AuthController@getLogout');
 // Route::post('admin/register', 'Auth\AuthController@postRegister');
 
 // API
+Route::get('admin/api/{function}/{object}/{id?}', 'APIController@get_query');
 Route::post('admin/api/{function}/{object}/{id}', 'APIController@post_query');
 
 // Articles
