@@ -13,7 +13,7 @@
 			téléphone, tél, e-mail, mail, place, jean, jaurès, situer, adresse, parking">
 
 		<link rel="stylesheet" media="screen" type="text/css" href="/css/admin.css">
-		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="/js/jquery-1.11.3.min.js"></script>
 		@yield('includes')
 	</head>
 

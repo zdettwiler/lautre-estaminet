@@ -43,5 +43,7 @@ class AdminController extends Controller
 	public function edit_volunteer($id)
 	{
 		$volunteer = Volunteer::where('id', $id)->first();
+
+		return view('admin.edit_volunteer', ['volunteer' => $volunteer]);
 	}
 }

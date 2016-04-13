@@ -103,12 +103,27 @@
 
     <div id="nous-contacter" class="home-section">
         <h1>NOUS CONTAC&shy;TER</h1>
-        <div class="home-section-wide">
+        <div class="nous-contacter-section-wide">
             <h3>L'Autre Estaminet<br>
                 5, Place Jean Jaurès<br>
                 62300 - LENS<br>
                 03 66 07 63 43<br>
-                Ouvert du mardi au samedi de 11h00 à 18h30.</h3>
+                Ouvert du mardi au samedi de 11h00 à 18h30.</h3><br>
+
+				<form method="POST" action="/nous-contacter">
+				    {!! csrf_field() !!}
+
+				    <p>Votre nom</p>
+				    <input type="text" name="name" value="{{ old('name') }}"><br><br>
+
+					<p>Votre adresse e-mail</p>
+				    <input type="email" name="email" id="password"><br><br>
+
+					<p>Votre message</p>
+				    <textarea type="message" name="remember"></textarea><br><br>
+
+					<button type="submit">Envoyer</button>
+				</form>
         </div>
     </div>
 
