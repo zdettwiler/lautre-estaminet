@@ -40,6 +40,8 @@ Route::post('admin/api/{function}/{object}/{id}', 'APIController@post_query');
 // Articles
 Route::get('admin/articles', 'AdminController@all_articles');
 Route::get('admin/article/{id}', 'AdminController@edit_articles');
+Route::get('admin/evenements', 'AdminController@all_events');
+Route::get('admin/evenement/{id}', 'AdminController@edit_event');
 Route::get('admin/benevoles', 'AdminController@all_volunteers');
 Route::get('admin/benevole/{id}', 'AdminController@edit_volunteer');
 Route::get('admin/artistes', 'AdminController@all_artists');

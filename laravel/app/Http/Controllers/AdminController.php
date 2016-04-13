@@ -9,6 +9,7 @@ use lautreestaminet\Http\Controllers\Controller;
 
 use lautreestaminet\Article;
 use lautreestaminet\Artist;
+use lautreestaminet\Event;
 use lautreestaminet\Volunteer;
 
 class AdminController extends Controller
@@ -58,5 +59,19 @@ class AdminController extends Controller
 		$artist = Artist::where('id', $id)->first();
 
 		return view('admin.edit_artist', ['artist' => $artist]);
+	}
+
+	public function all_events()
+	{
+		$events = Event::orderBy('datetime_end', 'desc')->get();
+
+        return view('admin.all_events', ['events' => $events]);
+	}
+
+	public function edit_event($id)
+	{
+		$event = Event::where('id', $id)->first();
+
+		return view('admin.edit_event', ['event' => $event]);
 	}
 }

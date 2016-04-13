@@ -74,7 +74,7 @@ a.big-button
     font-size: 20px;
     border: 2px solid #ffffff;
     text-decoration: none;
-    
+
 }
 a.big-button-home
 {
@@ -276,6 +276,21 @@ span#edit-status.fail
 	color: black;
 	width: 400px;
 	padding-left: 5px;
+}
+input[type="date"]
+{
+	width: 150px;
+}
+input[type="time"]
+{
+	width: 80px;
+}
+input[type="radio"]
+{
+	width: 10px;
+	color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
 }
 
 .edit-table-item-form #nationality-input

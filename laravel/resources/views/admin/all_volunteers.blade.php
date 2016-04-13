@@ -7,7 +7,7 @@
 
 @section('main-content')
 	<h1>BÉNÉVOLES</h1>
-	<a class="big-button" style="float:right" href="/admin/api/add/benevole/">Ajouter un Bénévole</a>
+	<a class="big-button" style="float:right" href="/admin/api/add/benevole/">ajouter un bénévole</a>
 
 	<table class="edit-table">
 		@foreach($volunteers as $volunteer)

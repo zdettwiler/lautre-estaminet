@@ -84,29 +84,29 @@ class HomeController extends Controller
 
         foreach($next_events as $event)
         {
-            $date_start = strtotime($event->date_start);
-            $date_end = strtotime($event->date_end);
+            $datetime_start = strtotime($event->datetime_start);
+            $datetime_end = strtotime($event->datetime_end);
 
             // Date end = 0
             // Jour 00 Mois à partir de hh:mm
-            if($date_end == 0)
+            if($datetime_end == 0)
             {
-                $date = $days[date('N', $date_start)] .' '. date('d', $date_start) .' '. $months_short[date('n', $date_start)] .' à partir de '. date('H:i', $date_start);
+                $date = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' à partir de '. date('H:i', $datetime_start);
             }
 
             // Same date, different time
             // Jour 00 Mois de HH:MM à HH:00
-            elseif(date('d/n/Y', $date_start) == date('d/n/Y', $date_end)
-                    AND date('H:i', $date_start) != date('H:i', $date_end))
+            elseif(date('d/n/Y', $datetime_start) == date('d/n/Y', $datetime_end)
+                    AND date('H:i', $datetime_start) != date('H:i', $datetime_end))
             {
-                $date = $days[date('N', $date_start)] .' '. date('d', $date_start) .' '. $months_short[date('n', $date_start)] .' de '. date('H:i', $date_start).' à '. date('H:i', $date_end);
+                $date = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' de '. date('H:i', $datetime_start).' à '. date('H:i', $datetime_end);
             }
 
             // times = 0
             // Jour 00 Mois au Jour 00 Mois
-            elseif(date('H:i', $date_start) == '00:00' AND date('H:i', $date_end) == '00:00')
+            elseif(date('H:i', $datetime_start) == '00:00' AND date('H:i', $datetime_end) == '00:00')
             {
-                $date = $days[date('N', $date_start)] .' '. date('d', $date_start) .' '. $months_short[date('n', $date_start)] .' au '. $days[date('N', $date_end)] .' '. date('d', $date_end) .' '. $months_short[date('n', $date_end)];
+                $date = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' au '. $days[date('N', $datetime_end)] .' '. date('d', $datetime_end) .' '. $months_short[date('n', $datetime_end)];
             }
 
             $event->date = $date;
@@ -170,7 +170,7 @@ class HomeController extends Controller
 
 		$equipe = Volunteer::where('date_start', '<>', '0000-00-00')->get();
 
-		
+
         return view('notre_equipe', compact('equipe_permanent', 'equipe'));
     }
 
