@@ -222,6 +222,32 @@ a.big-button,
     text-decoration: none;
 }
 
+table.edit-table
+{
+	width: 100%;
+}
+
+span#edit-status
+{
+	margin: -10px 0 0 20px;
+	font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}
+span#edit-status.success
+{
+	color: black;
+}
+span#edit-status.fail
+{
+	color: red;
+}
+
+.edit-table-item-form
+{
+	margin-top: 30px;
+}
 .edit-table-item-form label
 {
 	color: black;
@@ -229,7 +255,7 @@ a.big-button,
     font-weight: 300;
     font-size: 16px;
     line-height: 25px;
-	width: 150px;
+	width: 200px;
 	display: inline-block;
 }
 .edit-table-item-form input,

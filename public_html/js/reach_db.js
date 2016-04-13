@@ -5,17 +5,15 @@ function reach_db(form)
 		url: form.attr("action"),
 		data: form.serializeArray(),
 		beforeSend: function() {
-			// $("body").css('cursor', 'not-allowed');
-			console.log('on it');
+			$("#edit-status").html("Connexion à la base de donnée...");
 		},
 		success: function(response) {
 			console.log(response);
+			$("#edit-status").html("&#10004; Mis à jour!").delay(5000);
 
 		},
 		complete: function () {
-			$('#loading').css('display', 'none');
-			console.log('done');
-			// $("body").css('cursor', 'auto');
+			// $('#loading').css('display', 'none');
 		}
 	});
 }
