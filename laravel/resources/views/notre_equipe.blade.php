@@ -27,9 +27,18 @@
 
     <div id="equipe-permanent">
 
-    @foreach($equipe as $volunteer)
+	@foreach($equipe_permanent as $volunteer_permanent)
+        <div class="equipe-volunteer">
+            <h3 class="equipe-volunteer-name">{{ $volunteer_permanent->name }}</h3>
+            <img class="equipe-volunteer-img" src="img/benevoles/benevole_{{ $volunteer_permanent->id }}.png" width="150px" height="150px">
+            <p class="equipe-volunteer-blurb">{{ $volunteer_permanent->description }}</p>
+        </div>
+    @endforeach
+
+	@foreach($equipe as $volunteer)
         <div class="equipe-volunteer">
             <h3 class="equipe-volunteer-name">{{ $volunteer->name }}</h3>
+			<p>{{ $volunteer->get_date_string('start') }} - {{ $volunteer->get_date_string('leave') }}</p>
             <img class="equipe-volunteer-img" src="img/benevoles/benevole_{{ $volunteer->id }}.png" width="150px" height="150px">
             <p class="equipe-volunteer-blurb">{{ $volunteer->description }}</p>
         </div>

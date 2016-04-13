@@ -164,14 +164,19 @@ class HomeController extends Controller
 
     public function notre_equipe()
     {
-        $equipe = Volunteer::orderBy('date_leave', 'desc')->get();
+        $equipe_permanent = Volunteer::where('date_start', '0000-00-00')
+			->where('date_leave', '0000-00-00')
+			->get();
 
-        return view('notre_equipe', compact('equipe'));
+		$equipe = Volunteer::where('date_start', '<>', '0000-00-00')->get();
+
+		
+        return view('notre_equipe', compact('equipe_permanent', 'equipe'));
     }
 
 	public function nous_contacter(Request $form)
 	{
-		
+
 	}
 
 
