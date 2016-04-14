@@ -361,6 +361,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #3b2612;
+	background-attachment: scroll;
 }
 #logo-home
 {
