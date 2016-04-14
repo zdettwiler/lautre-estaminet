@@ -4,7 +4,7 @@
 		<title>L'Autre Estaminet</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-
+		<link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
 		<link rel="stylesheet" media="screen" type="text/css" href="/css/main.css">
 		<script src="js/jquery-1.11.3.min.js"></script>
 		@yield('includes')

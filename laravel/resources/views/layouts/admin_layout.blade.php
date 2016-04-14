@@ -11,7 +11,7 @@
 			dimension, suicide, créativité, création, récréative, préventive, solidaire, actuel, bientôt, bientot, actualité,
 			actualités, extra, plus, passé, passé, post, nouvelle, nouvelles, nouveauté, sensationel, galerie, photos, images, diaporama,
 			téléphone, tél, e-mail, mail, place, jean, jaurès, situer, adresse, parking">
-
+		<link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
 		<link rel="stylesheet" media="screen" type="text/css" href="/css/admin.css">
 		<script src="/js/jquery-1.11.3.min.js"></script>
 		@yield('includes')
