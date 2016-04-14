@@ -40,7 +40,7 @@ return [
 
     'months_short' => [
         1  => 'JAN',
-        2  => 'FÉV',
+        2  => 'FEV',
         3  => 'MAR',
         4  => 'AVR',
         5  => 'MAI',
