@@ -73,9 +73,7 @@
 			Un effort de réduction des teneurs en sucre.
 		</p>
 
-		<p>
-			Ragusa, Amaretti, Toblerone
-		</p>
+		<h3>Ragusa, Amaretti, Toblerone</h3>
 	</div>
 
 @stop
