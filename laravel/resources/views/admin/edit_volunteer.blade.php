@@ -8,7 +8,6 @@
 	<script>
 		$(function()
 		{
-
 			// NATIONALITY INPUT -------------------------------------------------------------------
 			prev_val = $("#nationality-input input").val();
 
@@ -65,6 +64,18 @@
 				$("input[name='nationality']").val(country).trigger("change");
 			});
 
+
+			// CONFIRMATION
+			$('#delete-item-button').click(function(e){
+				if(window.confirm("Are you sure?"))
+				{
+					return true;
+				}
+				else {
+					e.preventDefault();
+				}
+			});
+
 		});
 
 	</script>
@@ -73,6 +84,7 @@
 @section('main-content')
 	<div id="loading-bar"></div>
 	<h1>BÉNÉ&shy;VOLE #{{ $volunteer->id }}</h1>
+	<a id="delete-item-button" class="big-button" style="float:right" href="/admin/api/delete/benevole/{{ $volunteer->id }}"><img src="/img/delete.png">supprimer le bénévole</a>
 	<span id="edit-status" class="success">Fais tes modifs!</span>
 
 	<form class="edit-table-item-form" method="POST" action="/admin/api/edit/volunteer/{{ $volunteer->id }}" data-db-table="equipe">
