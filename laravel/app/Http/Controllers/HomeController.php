@@ -134,7 +134,9 @@ class HomeController extends Controller
 			->where('date_leave', '0000-00-00')
 			->get();
 
-		$equipe = Volunteer::where('date_start', '<>', '0000-00-00')->get();
+		$equipe = Volunteer::where('date_start', '<>', '0000-00-00')
+			->orderBy('date_leave', 'desc')
+			->get();
 
 
         return view('notre_equipe', compact('equipe_permanent', 'equipe'));
