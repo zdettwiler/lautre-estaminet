@@ -523,11 +523,19 @@ input[type="radio"]
 	.home-section-data
     {
         width: 90%;
+		margin: 20px 0 70px 5px;;
+		padding-left: 10px;
     }
     .home-section-blurb
     {
         width: 90%;
     }
+	#footer .links
+	{
+		width: 100%;
+		height: auto;
+		padding: 10px;
+	}
 }
 
 @media (max-width: 530px)
@@ -542,9 +550,14 @@ input[type="radio"]
 		padding: 10px;
 	}
 
-	a.big-button
+	a.big-button-home
 	{
-		bottom: 10px;
-		right: 10px;
+		position: relative;;
+		top: auto;
+		right: auto;
+		bottom: auto;
+		left: auto;
+		display: table;
+		margin: 0 auto 20px auto;;
 	}
 }
