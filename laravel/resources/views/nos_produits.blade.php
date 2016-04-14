@@ -60,7 +60,7 @@
 		<h3>Crêpes &amp; Galettes</h3>
 		<p>
 			<b>Crêpes</b>: <i>Nature/Sucrée, Nutella, Spéculos, Snickers, Bountie, Sirop d'érable, Citronade, Confiture</i>.<br/>
-			<b>Galette Sarrasin</b>: <i>Jambon ou Blanc de poulet + 3Fromages ou Cr�me de Maroilles ou Crême de Saint Agur</i>
+			<b>Galette Sarrasin</b>: <i>Jambon ou Blanc de poulet + 3Fromages ou Crème de Maroilles ou Crême de Saint Agur</i>
 		</p>
 
 		<h3>Glaces &amp; Sorbets</h3>

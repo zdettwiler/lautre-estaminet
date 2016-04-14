@@ -19,7 +19,9 @@ Route::get('nos-evenements/{date?}/{slug?}', 'HomeController@nos_evenements');
 Route::get('notre-expo-tournante', 'HomeController@notre_expo_tournante');
 Route::get('notre-equipe', 'HomeController@notre_equipe');
 Route::get('nos-partenaires', 'HomeController@nos_partenaires');
-Route::post('nous-contacter', 'HomeController@nous_contacter');
+Route::get('nous-trouver', 'HomeController@nous_trouver');
+Route::get('nous-contacter', 'HomeController@nous_contacter');
+Route::post('nous-contacter', 'HomeController@post_nous_contacter');
 
 
 // ADMIN -------------------------------------------------------------------------------------------

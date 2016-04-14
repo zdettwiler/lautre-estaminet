@@ -115,7 +115,7 @@
                 03 66 07 63 43<br>
                 Ouvert du mardi au samedi de 11h00 à 18h30.</h3><br>
 
-				<form method="POST" action="/nous-contacter">
+				{{-- <form method="POST" action="/nous-contacter">
 				    {!! csrf_field() !!}
 
 				    <p>Votre nom</p>
@@ -128,7 +128,7 @@
 				    <textarea type="message" name="remember"></textarea><br><br>
 
 					<button type="submit">Envoyer</button>
-				</form>
+				</form> --}}
         </div>
     </div>
 

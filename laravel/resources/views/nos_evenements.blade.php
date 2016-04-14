@@ -11,14 +11,14 @@
     <div id="events-notices">
         <h3>Prochainement à l'Autre Estaminet:</h3>
 
-    @if($next_events != [])
+    @if(!$next_events->isEmpty())
         <ul>
         @foreach($next_events as $event)
                 <li>{{ $event->date }}: {{ $event->event }}</li>
         @endforeach
         </ul>
     @else
-        <p>Rien à prévoir...</p>
+        <p>Rien de prévu pour le moment...</p>
     @endif
 
 

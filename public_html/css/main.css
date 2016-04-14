@@ -366,7 +366,7 @@ input[type="radio"]
 }
 #nos-produits
 {
-    background: url(../img/home/nos_produits_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/nos_produits_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -375,7 +375,7 @@ input[type="radio"]
 }
 #notre-concept
 {
-    background: url(../img/home/notre_concept_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/notre_concept_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -384,7 +384,7 @@ input[type="radio"]
 }
 #nos-evenements
 {
-    background: url(../img/home/nos_evenements_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/nos_evenements_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -393,7 +393,7 @@ input[type="radio"]
 }
 #notre-expo-tournante
 {
-    background: url(../img/home/notre_expo_tournante_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/notre_expo_tournante_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -402,7 +402,7 @@ input[type="radio"]
 }
 #notre-equipe
 {
-    background: url(../img/home/notre_equipe_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/notre_equipe_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -412,7 +412,7 @@ input[type="radio"]
 }
 #nos-partenaires
 {
-    background: url(../img/home/nos_partenaires_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/nos_partenaires_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -435,7 +435,7 @@ input[type="radio"]
 }
 #nous-contacter
 {
-    background: url(../img/home/nous_contacter_home_bg.png) no-repeat center center fixed;
+    background: url(../img/home/nous_contacter_home_bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -445,24 +445,37 @@ input[type="radio"]
 
 #footer
 {
-	height: 80%;
+	height: 400px;
 	background-color: #555555;
 	position: relative;
+	padding: 0;
 }
-#footer #links
+#footer .links
 {
 	width: 33%;
+	height: 100%;
 	float: left;
+	padding: 10px 0 0 100px;
+	font-size: 14px;
 }
-#footer #facebook
+#footer .links p
 {
-	width: 33%;
-	float: left;
+	text-align: left;
+	font-size: 14px;
+	color: #DDDDDD;
 }
-#footer #links
+#footer #designer-signature
 {
-	width: 33%;
-	float: left;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#footer #designer-signature p
+{
+	text-align: center;
+	font-size: 14px;
+	color: #DDDDDD;
 }
 
 

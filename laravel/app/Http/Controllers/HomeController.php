@@ -148,9 +148,14 @@ class HomeController extends Controller
         return view('notre_equipe', compact('equipe_permanent', 'equipe_actuels', 'equipe'));
     }
 
-	public function nous_contacter(Request $form)
+	public function nous_trouver()
 	{
+		return redirect('/#nous-trouver');
+	}
 
+	public function nous_contacter()
+	{
+		return redirect('/#nous-contacter');
 	}
 
 

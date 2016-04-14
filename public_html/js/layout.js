@@ -22,4 +22,10 @@ $(function()
 	// $(window).resize(home_sections_layout);
     toggle_nav();
     $(document).on('scroll', toggle_nav);
+
+	// console.log(window.location.pathname);
+	// console.log(window.location.href);
+	$('div.nav-link > a').each(function() {
+		$(this).attr('href', $(this).attr('href').replace("/", "#"));
+	});
 });

@@ -1,23 +1,31 @@
-@extends('layouts.main_layout')
+@extends('layouts.admin_layout')
 
-<form method="POST" action="/admin/login">
-    {!! csrf_field() !!}
+@section('includes')
+    <link rel="stylesheet" media="screen" type="text/css" href="/css/main.css">
+@stop
 
-    <div>
-        Email
-        <input type="text" name="name" value="{{ old('name') }}">
-    </div>
+@section('main-content')
+	<h1>CONNEXION</h1>
 
-    <div>
-        Password
-        <input type="password" name="password" id="password">
-    </div>
+	<form class="edit-table-item-form" method="POST" action="/admin/login">
+	    {!! csrf_field() !!}
 
-    <div>
-        <input type="checkbox" name="remember"> Remember Me
-    </div>
+	    <div>
+	        <label for="name">username</label>
+	        <input type="text" name="name" value="{{ old('name') }}">
+	    </div><br>
 
-    <div>
-        <button type="submit">Login</button>
-    </div>
-</form>
+	    <div>
+	        <label for="password">password</label>
+	        <input type="password" name="password" id="password">
+	    </div>
+
+	    {{-- <div>
+	        <input type="checkbox" name="remember"> Remember Me
+	    </div> --}}
+
+	    <div>
+	        <button type="submit">Login</button>
+	    </div>
+	</form>
+@stop

@@ -29,19 +29,31 @@
 
 
 		<div id="footer">
-			<div id="links">
-				<h3>Liens Utiles</h3>
+			<div class="links">
+				<p>
+					L'Autre Estaminet<br>
+					5, place Jean Jaurès<br>
+					62300 Lens<br>
+					03 66 07 63 43<br><br>
+
+					Ouvert du mardi au samedi de 11h00 à 18h30<br><br>
+				</p>
 			</div>
 
-			<div id="facebook">
-				<h3>Facebook</h3>
-
+			<div class="links">
+				<h3>Suivez-nous!</h3>
+				<p>
+					<a href="http://facebook.com/lautreestaminet">Facebook</a><br>
+					<a href="http://twitter.com/lautreestaminet">Twitter</a><br>
+					<a href="http://instagram.com/lautre_estaminet">Instagram</a><br>
+					<a href="https://www.tripadvisor.fr/Restaurant_Review-g661384-d5779488-Reviews-L_Autre_Estaminet-Lens_Pas_de_Calais_Nord_Pas_de_Calais.html">TripAdvisor</a><br>
+				</p>
 			</div>
 
-			<div id="tripadvisor">
-				<h3>TripAdvisor</h3>
-
+			<div id="designer-signature">
+				<p>design par zed - avril 2016</p>
 			</div>
+
 		</div>
 	</body>
 </html>
