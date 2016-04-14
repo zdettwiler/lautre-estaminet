@@ -9,19 +9,25 @@ use lautreestaminet\Http\Controllers\Controller;
 
 use Carbon\Carbon;
 use DB;
+
 use lautreestaminet\Article;
 use lautreestaminet\Artist;
+use lautreestaminet\Event;
 use lautreestaminet\Volunteer;
 
 class HomeController extends Controller
 {
     public function home()
     {
-		$next_events = $this->_get_next_events();
-        $articles = $this->_get_articles(false, false, 3);
-        // _get_exhibitors
+		$next_events = Event::where('datetime_start', '<=', date("Y-m-d", strtotime("+4 week")))
+			->where('datetime_start', '>=', date("Y-m-d"))
+			->get();
 
-        return view('home', compact('next_events', 'articles'));
+		$articles = $this->_get_articles(false, false, 3);
+
+		$artists = Artist::where('date_end', '>', Carbon::now())->get();
+
+        return view('home', compact('next_events', 'articles', 'artists'));
     }
 
 	public function nos_produits()
@@ -65,54 +71,14 @@ class HomeController extends Controller
 
     public function nos_evenements($date = false, $slug = false)
     {
-        $next_events = $this->_get_next_events();
+		$next_events = Event::where('datetime_start', '<=', date("Y-m-d", strtotime("+4 week")))
+			->where('datetime_start', '>=', date("Y-m-d"))
+			->get();
+
+
         $articles = $this->_get_articles($date, $slug);
 
         return view('nos_evenements', compact('next_events', 'articles'));
-    }
-
-    private function _get_next_events()
-    {
-        $next_events = DB::table('events')
-			->where('date_start', '<=', date("Y-m-d", strtotime("+4 week")))
-			->where('date_start', '>=', date("Y-m-d"))
-			->get();
-
-        $days = config('fr_dates.days');
-        $months = config('fr_dates.months');
-        $months_short = config('fr_dates.months_short');
-
-        foreach($next_events as $event)
-        {
-            $datetime_start = strtotime($event->datetime_start);
-            $datetime_end = strtotime($event->datetime_end);
-
-            // Date end = 0
-            // Jour 00 Mois à partir de hh:mm
-            if($datetime_end == 0)
-            {
-                $date = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' à partir de '. date('H:i', $datetime_start);
-            }
-
-            // Same date, different time
-            // Jour 00 Mois de HH:MM à HH:00
-            elseif(date('d/n/Y', $datetime_start) == date('d/n/Y', $datetime_end)
-                    AND date('H:i', $datetime_start) != date('H:i', $datetime_end))
-            {
-                $date = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' de '. date('H:i', $datetime_start).' à '. date('H:i', $datetime_end);
-            }
-
-            // times = 0
-            // Jour 00 Mois au Jour 00 Mois
-            elseif(date('H:i', $datetime_start) == '00:00' AND date('H:i', $datetime_end) == '00:00')
-            {
-                $date = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' au '. $days[date('N', $datetime_end)] .' '. date('d', $datetime_end) .' '. $months_short[date('n', $datetime_end)];
-            }
-
-            $event->date = $date;
-        }
-
-        return $next_events;
     }
 
     private function _get_articles($date, $slug, $nb = 5)

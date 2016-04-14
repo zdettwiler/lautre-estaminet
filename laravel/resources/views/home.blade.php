@@ -40,8 +40,7 @@
     <div id="notre-concept" class="home-section">
         <h1>NOTRE CONCEPT</h1>
         <div class="home-section-blurb">
-            <p>Les bénévoles et amis de l'association « le Lien » ont à coeur d'offrir à la population lensoise des perspectives d'épanouissement à travers l'ouverture de l'Autre Estaminet.
-    Nous proposons un lieu convivial d'expression, d'écoute, de partage, d'échanges divers et variés intégrant plusieurs dimensions.</p>
+            <p>Les bénévoles et amis de l'association « le Lien » ont à coeur d'offrir à la population lensoise des perspectives d'épanouissement à travers l'ouverture de l'Autre Estaminet. Nous proposons un lieu convivial d'expression, d'écoute, de partage, d'échanges divers et variés intégrant plusieurs dimensions.</p>
         </div>
         <a href="notre-concept" class="big-button-home">lire davantage</a>
     </div>
@@ -50,7 +49,7 @@
         <h1>NOS ÉVÉNE&shy;MENTS</h1>
         <div class="home-section-data">
             <h3>Prochainement à l'Autre Estaminet:</h3>
-            @if($next_events != [])
+            @if(!$next_events->isEmpty())
                 <ul>
                 @foreach($next_events as $event)
                         <li>{{ $event->date }}: {{ $event->event }}</li>
@@ -74,10 +73,16 @@
         <h1>NOTRE EXPO TOUR&shy;NANTE</h1>
         <div class="home-section-data">
             <h3>Actuellement à l'Autre Estaminet:</h3>
-            <ul>
-                <li>Picasso</li>
-                <li>Delacroix</li>
-            </ul>
+
+            @if($artists != [])
+                <ul>
+                @foreach($artists as $artist)
+                    <li>{{ $artist->name }} jusqu'au {{ $artist->get_date_string('end') }}</li>
+                @endforeach
+                </ul>
+            @else
+                {{-- <p>Rien à prévoir...</p> --}}
+            @endif
         </div>
         <a href="notre-expo-tournante" class="big-button-home">découvrir nos artistes</a>
     </div>
