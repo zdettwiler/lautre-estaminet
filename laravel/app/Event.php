@@ -18,7 +18,7 @@ class Event extends Model
 
 		// Date end = 0
 		// Jour 00 Mois à partir de hh:mm
-		if($datetime_end == 0)
+		if($datetime_end == false || $datetime_end < 0)
 		{
 			$date_string = $days[date('N', $datetime_start)] .' '. date('d', $datetime_start) .' '. $months_short[date('n', $datetime_start)] .' à partir de '. date('H:i', $datetime_start);
 		}
