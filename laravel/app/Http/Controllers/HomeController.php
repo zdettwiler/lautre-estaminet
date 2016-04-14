@@ -88,7 +88,7 @@ class HomeController extends Controller
         $months_short = config('fr_dates.months_short');
 
         // If no date and no slug is provided, return all articles.
-        if(!$date AND !$slug)
+        if(!$date && !$slug)
         {
 			$articles = Article::orderBy('date', 'desc')
 				->take($nb)
@@ -100,12 +100,12 @@ class HomeController extends Controller
         {
             $day = substr($date, 0, 2);
             $month = strtoupper(substr($date, 2, 3));
-            $year = substr($date, 5, 2);
+            $year = substr($date, 5, 4);
 
             if(isset($months_nb[$month]))
-                $date = '20'. $year .'-'. $months_nb[$month] .'-'. $day;
+                $date = $year .'-'. $months_nb[$month] .'-'. $day;
 
-            if(!$slug)
+			if(!$slug)
             {
 				$articles = Article::where('date', $date)
 					->get();

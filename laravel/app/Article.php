@@ -13,4 +13,12 @@ class Article extends Model
 
 		return date('d', $date) ." ". $months_short[date('n', $date)] ." ". date('Y', $date);
 	}
+
+	public function get_url_date_string()
+	{
+        $months_short = config('fr_dates.months_short');
+		$date = strtotime($this->date);
+
+		return date('d', $date) . $months_short[date('n', $date)] . date('Y', $date);
+	}
 }

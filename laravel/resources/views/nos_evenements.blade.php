@@ -28,7 +28,7 @@
     <div id="articles-container">
     @if(!$articles->isEmpty())
         @foreach($articles as $article)
-        <h3 class="article-title"><a href="{{ $article->date }}/{{ $article->slug }}">{{ $article->title }}</a></h3>
+        <h3 class="article-title"><a href="/nos-evenements/{{ $article->get_url_date_string() }}/{{ $article->slug }}">{{ $article->title }}</a></h3>
         <div class="article-date">
             {{ $article->get_date_string() }}
         </div>
