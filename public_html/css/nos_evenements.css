@@ -22,9 +22,7 @@ html, body
     -o-background-size: cover;
     background-size: cover;
     background-color: #f7891d;
-    /*position: absolute;
-    top: 0;
-    right: 0;*/
+    background-attachment: scroll;
 }
 
 #events-notices

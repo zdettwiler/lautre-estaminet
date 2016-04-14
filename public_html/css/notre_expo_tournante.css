@@ -22,6 +22,7 @@ html, body
     -o-background-size: cover;
     background-size: cover;
     background-color: #2afa98;
+	background-attachment: scroll;
 }
 
 #exhibitors-notices

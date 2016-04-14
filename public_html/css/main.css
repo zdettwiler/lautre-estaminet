@@ -382,6 +382,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #e45772;
+	background-attachment: scroll;
 }
 #notre-concept
 {
@@ -391,6 +392,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #f1df00;
+	background-attachment: scroll;
 }
 #nos-evenements
 {
@@ -400,6 +402,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #f7891d;
+	background-attachment: scroll;
 }
 #notre-expo-tournante
 {
@@ -409,6 +412,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #2afa98;
+	background-attachment: scroll;
 }
 #notre-equipe
 {
@@ -418,6 +422,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #2ecb71;
+	background-attachment: scroll;
 
 }
 #nos-partenaires
@@ -428,6 +433,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #ffd0de;
+	background-attachment: scroll;
 }
 #nous-trouver
 {
@@ -451,6 +457,7 @@ input[type="radio"]
     -o-background-size: cover;
     background-size: cover;
     background-color: #9993db;
+	background-attachment: scroll;
 }
 
 #footer
