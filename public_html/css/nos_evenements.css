@@ -6,16 +6,6 @@
     Design by Zach Dettwiler
 */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
-@font-face
-{
-	font-family: 'ChunkFive Ex';
-	src: url('../fonts/chunkfive.eot');
-	src: local(ChunkFive Ex), url('../fonts/chunkfive.woff') format('woff'), url('../fonts/chunkfive.ttf') format('truetype'), url('../fonts/chunkfive.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 html, body
 {
     background-color: #F6881D; /*#F0C30F*/
