@@ -67,7 +67,7 @@
 
 			// CONFIRMATION
 			$('#delete-item-button').click(function(e){
-				if(window.confirm("Are you sure?"))
+				if(window.confirm("Cet élément sera définitivement supprimé. Es-tu sûr de vouloir continuer?"))
 				{
 					return true;
 				}

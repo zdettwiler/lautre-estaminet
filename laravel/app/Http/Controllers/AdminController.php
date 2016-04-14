@@ -35,7 +35,7 @@ class AdminController extends Controller
 
 	public function all_volunteers()
 	{
-		$volunteers = Volunteer::orderBy('date_leave', 'desc')->get();
+		$volunteers = Volunteer::orderBy('id', 'desc')->get();
 
         return view('admin.all_volunteers', ['volunteers' => $volunteers]);
 	}
