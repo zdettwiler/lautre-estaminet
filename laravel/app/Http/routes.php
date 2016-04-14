@@ -14,8 +14,8 @@
 Route::get('/', 'HomeController@home');
 Route::get('nos-produits', 'HomeController@nos_produits');
 Route::get('notre-concept', 'HomeController@notre_concept');
-Route::get('nos-evenements/{date?}/{slug?}', 'HomeController@nos_evenements');
-// Route::get('/nos-evenements/slugs', 'HomeController@make_slug');
+// Route::get('nos-evenements/{date?}/{slug?}', 'HomeController@nos_evenements');
+Route::get('/nos-evenements/slugs', 'HomeController@make_slug');
 Route::get('notre-expo-tournante', 'HomeController@notre_expo_tournante');
 Route::get('notre-equipe', 'HomeController@notre_equipe');
 Route::get('nos-partenaires', 'HomeController@nos_partenaires');
