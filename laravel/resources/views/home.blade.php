@@ -52,7 +52,7 @@
             @if(!$next_events->isEmpty())
                 <ul>
                 @foreach($next_events as $event)
-                        <li>{{ $event->get_date_string() }}: {{ $event->event }}</li>
+                        <li><b>{{ $event->get_date_string() }}</b> {{ $event->event }}</li>
                 @endforeach
                 </ul>
             @else
