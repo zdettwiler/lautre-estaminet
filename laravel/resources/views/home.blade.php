@@ -98,7 +98,7 @@
 
     <div id="nos-partenaires" class="home-section">
         <h1>NOS PARTE&shy;NAIRES</h1>
-        <a href="nos-partenaires" class="big-button-home">rencontrer nos partenaires</a>
+        <a href="" class="big-button-home">rencontrer nos partenaires</a>
     </div>
 
     <div id="nous-trouver" class="home-section">

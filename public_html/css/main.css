@@ -7,6 +7,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400&Roboto:300,400);
 
+*
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
 
 html, body
 {
@@ -86,8 +92,8 @@ a.big-button-home
     border: 2px solid #ffffff;
     text-decoration: none;
     position: absolute;
-    bottom: 20%;
-    right: 10%;
+    bottom: 50px;
+    right: 50px;
 }
 
 /* NAV */
@@ -177,9 +183,6 @@ a.big-button-home
     min-height: 100%;
     margin: 0px;
     padding: 50px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     position: relative;
 }
 .home-section-blurb
@@ -219,7 +222,8 @@ a.big-button-home
 .nous-contacter-section-wide textarea
 {
 	color: black;
-	width: 400px;
+	width: 100%;
+	max-width: 400px;
 }
 .nous-contacter-section-wide button[type="submit"],
 {
@@ -486,10 +490,13 @@ input[type="radio"]
         font-size: 80px;
     }
 
-    .home-section-data,
-	.home-section-blurb
+	.home-section-data
     {
-        margin-left: 10px;
+        width: 90%;
+    }
+    .home-section-blurb
+    {
+        width: 90%;
     }
 }
 
@@ -504,14 +511,6 @@ input[type="radio"]
 	{
 		padding: 10px;
 	}
-    .home-section-data
-    {
-        width: 90%;
-    }
-    .home-section-blurb
-    {
-        width: 90%;
-    }
 
 	a.big-button
 	{
