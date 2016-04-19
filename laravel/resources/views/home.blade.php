@@ -113,6 +113,7 @@
                 5, Place Jean Jaurès<br>
                 62300 - LENS<br>
                 03 66 07 63 43<br>
+                contact@lautre-estaminet.com<br>
                 Ouvert du mardi au samedi de 11h00 à 18h30.</h3><br>
 
 				{{-- <form method="POST" action="/nous-contacter">
