@@ -6,8 +6,14 @@
 @stop
 
 @section('main-content')
-	<h3>ARTICLES</h3>
 
-	
+	<p>
+		<a href="admin/articles">Articles ({{ $nb_articles }})</a><br>
+		<a href="admin/evenements">Événements ({{ $nb_events }})</a><br>
+		<a href="admin/benevoles">Bénévoles ({{ $nb_volunteers }})</a><br>
+	</p>
+
+
+
 
 @stop

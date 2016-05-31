@@ -39,6 +39,15 @@ button:focus
     outline: none;
 }
 
+button.small-button
+{
+	background-color: rgba(0,0,0,0);
+    border: 2px solid white;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
 /* FONTS */
 h1
 {

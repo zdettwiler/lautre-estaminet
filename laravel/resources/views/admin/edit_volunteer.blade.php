@@ -108,13 +108,13 @@
 	    </div><br>
 
 		<div>
-	        <label for="date_start">A commencé le</label>
-	        <input type="text" name="date_start" value="{{ $volunteer->date_start }}">
+	        <label for="date-start">A commencé le</label>
+	        <input type="date" name="date-start" value="{{ $volunteer->date_start }}">
 	    </div><br>
 
 		<div>
-	        <label for="date_leave">Est parti le</label>
-	        <input type="text" name="date_leave" value="{{ $volunteer->date_leave }}">
+	        <label for="date-leave">Est parti le</label>
+	        <input type="date" name="date-leave" value="{{ $volunteer->date_leave }}">
 	    </div><br>
 
 		<div>

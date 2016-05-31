@@ -8,8 +8,13 @@ function reach_db(form)
 			$("#edit-status").html("Connexion à la base de donnée...");
 		},
 		success: function(response) {
+			// console.log(response);
+			$("#edit-status").html("&#10004; Mis à jour!").delay(5000).html("Prêt!");
+
+		},
+		error: function(response) {
 			console.log(response);
-			$("#edit-status").html("&#10004; Mis à jour!").delay(5000);
+			$("#edit-status").html("Erreur!").delay(5000);
 
 		},
 		complete: function () {

@@ -18,10 +18,18 @@ class AdminController extends Controller
 	{
 		$this->middleware('auth');
 	}
-	
+
     public function index()
 	{
-		return view('admin.dashboard');
+		$nb_articles = Article::count();
+		$nb_events = Event::count();
+		$nb_volunteers = Volunteer::count();
+
+		return view('admin.dashboard', [
+			'nb_articles' => $nb_articles,
+			'nb_events' => $nb_events,
+			'nb_volunteers' => $nb_volunteers
+		]);
 	}
 
 	public function all_articles()

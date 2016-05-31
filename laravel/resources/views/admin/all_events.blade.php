@@ -19,8 +19,8 @@
 					</a><br>
 					{!! $event->description !!}
 				</td>
-				<td><a href="artiste/{{ $event->id }}"><img src="/img/edit.png"></a></td>
-				<td><a href="artiste/{{ $event->id }}"><img src="/img/delete.png"></a></td>
+				<td><a href="evenement/{{ $event->id }}"><img src="/img/edit.png"></a></td>
+				<td><a href="evenement/{{ $event->id }}"><img src="/img/delete.png"></a></td>
 			</tr>
 		@endforeach
 	</table>
